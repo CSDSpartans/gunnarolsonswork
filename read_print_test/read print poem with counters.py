@@ -27,11 +27,11 @@ while line != '':                      # while not end of file
       print ()
     else:
       line_counter += 1
-      if line_counter < 10:
-        print('   ',line_counter,')', line, end = '')   # don't print another new line
+      if line_counter <= 9:
+        print(line_counter,')', '   ', line, end = '')   # don't print another new line
       else:
-        if  line_counter > 10:
-          print('  ',line_counter,')', line, end = '')
+        if  line_counter >= 10:
+          print(line_counter,')', '  ', line, end = '')
       total_lines_in_file +=1  
    
     line = file_input.readline()
@@ -41,9 +41,8 @@ while line != '':                      # while not end of file
 
 print ()
 print ()
-print ("Total number of stanzas in this poem are",  stanza_counter)
-print ("Total number of lines in this poem are", total_lines_in_file)
-
+print ("Total number of stanzas in this poem are",  stanza_counter, ".")
+print ("Total number of lines in this poem are", total_lines_in_file, ".")
 print("Tuesday Afternoon is in the Days of Future Passed album")
 print("The Moody Blues released this album in 1967")
 print("Ray Thomas, Mike Pinder, Denny Laine, Clint Warwick, Rodney Clark, and Patrick Moraz were all members of the band")
